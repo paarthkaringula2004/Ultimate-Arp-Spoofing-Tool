@@ -5,144 +5,134 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 
 ## 🎯 Overview
-Advanced network packet analysis and ARP spoofing tool built with Python. Featuring pattern matching, real-time monitoring, and beautiful reporting interfaces.
+**Ultimate ARP Spoofing Tool** is a powerful network security and penetration testing tool designed for advanced network packet analysis and ARP spoofing. Built with Python, it provides real-time monitoring, pattern-based traffic analysis, and comprehensive reporting interfaces.
 
 ## ✨ Key Features
 
-🔍 **Network Analysis**
+### 🔍 Network Analysis
 - Real-time packet capture and filtering
 - Pattern-based traffic monitoring
 - MAC address resolution
 - Hostname detection
 
-🛡️ **ARP Operations**
+### 🛡️ ARP Operations
 - Smart gateway detection
 - Target device mapping
 - Traffic interception
-- Custom packet rules
+- Custom packet injection rules
 
-📊 **Reporting & Export**
+### 📊 Reporting & Export
 - Interactive HTML reports
 - JSON data export
 - CSV compatibility
 - Plain text logs
 
+---
+
 ## 🖥️ Screenshots
 
-### ARP Spoofing Tool in Action
+### ARP Spoofing in Action
 
 ![Application Running]()
 
-*Initializes the tool and displays the status of the ARP spoofing attack.*
+*Displays the status of the ARP spoofing attack.*
 
 ### Packet Capture Overview
 
 ![Packet Capture]()
 
-*Real-time packet capture showing intercepted network packets with source and destination details. (Press **Ctrl+C** to stop packet capturing)* 
+*Real-time capture showing intercepted packets with source and destination details.*
 
 ### Export Format Options
 
 ![Export Format Options]()
 
-*Options for exporting captured data in various formats such as HTML, JSON, CSV, and plain text.*
+*Export captured data in multiple formats: HTML, JSON, CSV, and plain text.*
 
 ### HTML Report
 
 ![HTML Report]()
 
-*Generated HTML report providing a detailed analysis of the captured packets.*
+*Generated HTML report providing detailed network analysis.*
 
+---
 
 ## 🚀 Quick Start
 
-## ⚠️ Precautions Before Using **Ultimate Arp Spoofing Tool**  
-🛡️ Follow these steps to stay secure & undetected:
+### ⚠️ Important Precautions
+Before using **Ultimate ARP Spoofing Tool**, ensure the following:
 
 1. **Use a compatible WiFi adapter**  
    Recommended: **TP-Link Archer T2U Plus (AC600)**
    
-   ![Recommended WiFi Adapter](https://github.com/paarthkaringula2004/Ultimate-Spoof-Caplet/blob/main/images/tp-link-adapter.jpg)
+   ![WiFi Adapter](https://github.com/paarthkaringula2004/Ultimate-Spoof-Caplet/blob/main/images/tp-link-adapter.jpg)
    
    - [Amazon India](https://www.amazon.in/tp-link-archer-t2u-plus/s?k=tp+link+archer+t2u+plus)  
    - [Flipkart](https://www.flipkart.com/tp-link-archer-t2u-plus-ac600-high-gain-wireless-dual-band-usb-adapter/p/itm78f701f57c630)  
    - [TP-Link Official Store](https://www.tp-link.com/in/home-networking/high-gain-adapter/archer-t2u-plus/)
 
-3. **Change the MAC Address:**  
+2. **Change the MAC Address:**
    ```sh
    sudo ifconfig wlan1 down  
    sudo ifconfig wlan1 hw ether 00:11:22:33:44:55  
    sudo ifconfig wlan1 up  
    ```
-4. **Enable Monitor Mode:**  
+
+3. **Enable Monitor Mode:**
    ```sh
    sudo airmon-ng check kill  
    sudo ifconfig wlan1 down  
    sudo iwconfig wlan1 mode monitor  
    sudo ifconfig wlan1 up  
    ```
-```bash
-# Clone repository
-https://github.com/paarthkaringula2004/Ultimate-Arp-Spoofing-Tool.git
-cd Ultimate Arp Spoof
-```
 
-### Install dependencies
+### Installation
 ```bash
+# Clone the repository
+git clone https://github.com/paarthkaringula2004/Ultimate-Arp-Spoofing-Tool.git
+cd Ultimate-Arp-Spoofing-Tool
+
+# Install dependencies
 pip install -r requirements-dev.txt
 ```
 
-### Run with default settings
+### Running the Tool
 ```bash
 # Linux/macOS
 sudo python -m src
 
-# Windows (run PowerShell/CMD as Administrator)
+# Windows (Run PowerShell/CMD as Administrator)
 python -m src
 ```
+> **Note**: Root/Administrator privileges are required for network operations.
 
-> ⚠️ **Note**: Root/Administrator privileges are required for network operations
+---
 
-## 💻 **Usage Examples**
+## 💻 Usage Examples
 
 ### Basic Monitoring:
 ```bash
-# Linux/macOS
 sudo python -m src --target [TARGET IP]
-
-# Windows (run PowerShell/CMD as Administrator)
-python -m src --target [TARGET IP]
 ```
 
 ### Pattern Matching:
 ```bash
-# Linux/macOS
 sudo python -m src --patterns "HTTP,FTP"
-
-# Windows (run PowerShell/CMD as Administrator)
-python -m src --patterns "HTTP,FTP"
 ```
 
-### Custom Export:
+### Exporting Data:
 ```bash
-# Linux/macOS
 sudo python -m src --format json
-
-# Windows (run PowerShell/CMD as Administrator)
-python -m src --format json
 ```
 
-### Example:
+### Full Example:
 ```bash
-# Linux/macOS
-    sudo python -m src -t [TARGET IP] -g [GATEWAY IP] -p "password" "secret" -f html
-
-# Windows (run PowerShell/CMD as Administrator)
-python -m src -t [TARGET IP] -g [GATEWAY IP] -p "password" "secret" -f html
+sudo python -m src -t [TARGET IP] -g [GATEWAY IP] -p "password" "secret" -f html
 ```
 
-## 📋 **Command Options**
+---
 
+## 📋 Command Options
 | Option       | Description           | Default       |
 |--------------|-----------------------|---------------|
 | -t, --target | Target IP address     | Auto-detect   |
@@ -150,47 +140,63 @@ python -m src -t [TARGET IP] -g [GATEWAY IP] -p "password" "secret" -f html
 | -p, --patterns| Search patterns      | None          |
 | -f, --format | Export format         | html          |
 
-## 📁 **Project Structure**
+---
+
+## 📁 Project Structure
 ```
 src/
 ├── core/          # Core functionality
 ├── network/       # Network operations
-├── spoofer/       # ARP implementation
+├── spoofer/       # ARP spoofing implementation
 ├── models/        # Data models
 └── utils/         # Helper functions
 ```
 
-## 📦 **Dependencies**
-- scapy - Network packet manipulation
-- rich - Terminal UI components
-- netifaces - Network interface handling
-- jinja2 - Report templating
+---
 
-## 🔧 **Development**
+## 📦 Dependencies
+- **scapy** - Network packet manipulation
+- **rich** - Terminal UI components
+- **netifaces** - Network interface handling
+- **jinja2** - Report templating
+
+---
+
+## 🔧 Development
 ```bash
-# Setup development environment
+# Set up development environment
 python -m venv venv
 source venv/Scripts/activate  # Windows
 pip install -r requirements-dev.txt
 ```
 
-## ⚠️ **Security Notice**
-Educational Purposes Only: This tool should only be used on networks where you have explicit permission to test.
+---
 
-## 🤝 **Contributing**
-1. Fork repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Submit pull request
+## ⚠️ Security Notice
+**This tool is intended for educational and security testing purposes only.**
+Use it responsibly on networks where you have explicit permission.
 
-## 📜 **License**
-MIT License
+---
 
-## 👤 **Author**
+## 🤝 Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Submit a pull request
+
+---
+
+## 📜 License
+**MIT License**
+
+---
+
+## 👤 Author
 - **Paarth Karingula**  
   - GitHub: [@paarthkaringula2004](https://github.com/paarthkaringula2004)
   - LinkedIn: [Paarth Karingula](https://www.linkedin.com/in/paarthkaringula2004)
 
 💬 **Support**
-Report issues on GitHub
+For issues, report them on [GitHub](https://github.com/paarthkaringula2004/Ultimate-Arp-Spoofing-Tool/issues).
+
