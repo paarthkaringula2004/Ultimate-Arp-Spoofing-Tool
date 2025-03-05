@@ -1,27 +1,27 @@
-# Ultimate ARP Spoofing Tool 🌐
+# Ultimate ARP Spoofing Tool
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.8+-orange.svg)
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 
-## 🎯 Overview
+##  Overview
 **Ultimate ARP Spoofing Tool** is a powerful network security and penetration testing tool designed for advanced network packet analysis and ARP spoofing. Built with Python, it provides real-time monitoring, pattern-based traffic analysis, and comprehensive reporting interfaces.
 
-## ✨ Key Features
+##  Key Features
 
-### 🔍 Network Analysis
+###  Network Analysis
 - Real-time packet capture and filtering
 - Pattern-based traffic monitoring
 - MAC address resolution
 - Hostname detection
 
-### 🛡️ ARP Operations
+###  ARP Operations
 - Smart gateway detection
 - Target device mapping
 - Traffic interception
 - Custom packet injection rules
 
-### 📊 Reporting & Export
+###  Reporting & Export
 - Interactive HTML reports
 - JSON data export
 - CSV compatibility
@@ -29,7 +29,7 @@
 
 ---
 
-## 🖥️ Screenshots
+##  Screenshots
 
 ### ARP Spoofing in Action
 
@@ -57,7 +57,7 @@
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### ⚠️ Important Precautions
 Before using **Ultimate ARP Spoofing Tool**, ensure the following:
@@ -108,7 +108,7 @@ python -m src
 
 ---
 
-## 💻 Usage Examples
+##  Usage Examples
 
 ### Basic Monitoring:
 ```bash
@@ -162,7 +162,7 @@ src/
 
 ---
 
-## 🔧 Development
+##  Development
 ```bash
 # Set up development environment
 python -m venv venv
@@ -172,13 +172,13 @@ pip install -r requirements-dev.txt
 
 ---
 
-## ⚠️ Security Notice
+##  Security Notice
 **This tool is intended for educational and security testing purposes only.**
 Use it responsibly on networks where you have explicit permission.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 1. Fork the repository
 2. Create a feature branch
 3. Commit your changes
@@ -187,12 +187,12 @@ Use it responsibly on networks where you have explicit permission.
 
 ---
 
-## 📜 License
+##  License
 **MIT License**
 
 ---
 
-## 👤 Author
+##  Author
 - **Paarth Karingula**  
   - GitHub: [@paarthkaringula2004](https://github.com/paarthkaringula2004)
   - LinkedIn: [Paarth Karingula](https://www.linkedin.com/in/paarthkaringula2004)
