@@ -133,7 +133,7 @@ sudo python -m src -t [TARGET IP] -g [GATEWAY IP] -p "password" "secret" -f html
 ```bash
 echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
-###(OR)
+### (OR)
 
 ```bash
 sysctl -w net.ipv4.ip_forward=1
