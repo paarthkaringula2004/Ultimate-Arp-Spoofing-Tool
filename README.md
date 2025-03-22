@@ -129,7 +129,16 @@ sudo python -m src --format json
 ```bash
 sudo python -m src -t [TARGET IP] -g [GATEWAY IP] -p "password" "secret" -f html
 ```
+### To Get The Internet On Target Machine (IP forwarding):
+```bash
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+###(OR)
 
+```bash
+sysctl -w net.ipv4.ip_forward=1
+
+```
 ---
 
 ## 📋 Command Options
